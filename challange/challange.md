@@ -17,3 +17,17 @@
     - Jika tidak keduanya, tidak ada diskon
 
     Tampilkan "Diskon 20%", "Diskon 10%", atau "Tidak ada diskon"
+
+3. Buat program untuk menentukan salam berdasarkan waktu (format 24 jam):
+
+    - 05–11 → "Selamat pagi"
+    - 12–15 → "Selamat siang"
+    - 16–18 → "Selamat sore"
+    - 19–04 → "Selamat malam"
+
+4. Menentukan Tahun Kabisat
+    Buat program yang mengecek apakah sebuah tahun adalah kabisat atau bukan.
+
+    Syarat tahun kabisat:
+
+    - Habis dibagi 4 dan tidak habis dibagi 100 Atau habis dibagi 400
