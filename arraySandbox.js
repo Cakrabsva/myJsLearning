@@ -10,7 +10,17 @@
  * splice = menambahkan data di tengah2 data
  * 
  * untuk mendeklarasikan string dalam array menggunakan ''
- * untuk menuliskan variable berisikan array sebaiknya menggunakan plural word 
+ * untuk menuliskan variable berisikan array sebaiknya menggunakan plural word
+ * 
+ * ARRAY MULTIDIMENTIONS
+ * =============
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ *  
  * 
  */
 
