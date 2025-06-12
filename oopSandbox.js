@@ -2,6 +2,13 @@
  * 
  * OOP (Object oriented programming)
  * 
+ * in OOP we called:
+ * 
+ * Object > instance
+ * KeyName > property
+ * function > method
+ * 
+ * 
  */
 
 const person1 = {
@@ -34,11 +41,6 @@ const couple = {person1, person2}
  */
 
 class Person {
-    name;
-    age;
-    sex;
-    city;
-
     //constructor is a special method/function proses that otomatically run when instantiation
     //everytime class been call, consturctur will follow 'run'
     constructor (name, age, sex, city) {
@@ -78,3 +80,39 @@ let result = numbers
 .join('-')
 
 console.log(result)
+
+//another exercise======================================================
+
+//this code below called instance
+class Pokemon {
+    constructor(name, type, hp, level = 0) {
+        this.name = name;
+        this.type = type;
+        this.hp = hp;
+        this.level = level;
+    }
+
+    // this code below called method
+    training (hp = 1000, lvl = 100) {
+        this.hp += hp
+        this.level += lvl
+
+        // do 'return this' to return it self so you can do chaining, in order to run this methode more than once
+        return this
+    }
+
+    evolve () {
+        this.training()
+        return(`${this.name} has successfully evolve and incerase it hp to ${this.hp} and increase it level to ${this.level}`)
+    }
+
+}
+//this code below called instanciate
+let pikachu = new Pokemon ('pikachu', 'electric', 100, 0)
+
+//this code below how we run the method
+console.log(pikachu.evolve())
+
+//this is how to chaining method
+console.log(pikachu.training().training().training())
+console.log(pikachu.evolve())
