@@ -54,12 +54,12 @@
 
 // Release 0 - Done
 class Animal  {
-    constructor () {
-        this.name = 'Ruru';
-        this.age = 1;
-        this.type ='Cat';
-        this.favouriteFoods = ['Salmon', 'Tuna', 'Chicken'];
-        this.totalLegs = 4;
+    constructor (name='Ruru', age=1, type='Cat', favouriteFoods=['Salmon', 'Tuna', 'Chicken'], totalLegs=4) {
+        this.name = name;
+        this.age = age;
+        this.type = type;
+        this.favouriteFoods = favouriteFoods
+        this.totalLegs = totalLegs;
     }
     move () {
         let message = `I'm Walking and running with ${this.totalLegs} legs`
@@ -79,9 +79,13 @@ console.log(ruruTheCat)
 ruruTheCat.name = 'Ruru The Cat'
 console.log(ruruTheCat)
 
-//Release 1
+//Release 1 - Done
 console.log(ruruTheCat.move())
 console.log(ruruTheCat.getInformation("Anyeong Haseoo~", "Chasing birds"))
 
-//Release 2
-    //code here
+//Release 2 - Done
+const charlieTheDog = new Animal('Charlie', 2, 'Dog', ['Meat', 'Cake', 'Chicken'], 4)
+console.log(charlieTheDog)
+console.log(charlieTheDog.move())
+console.log(charlieTheDog.getInformation("Swadikhaarp~", "Chasing Cats"))
+console.log({ruruTheCat, charlieTheDog})
