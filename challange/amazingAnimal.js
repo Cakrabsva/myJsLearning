@@ -36,7 +36,7 @@
  * 1. Buatlah instance method 'move' and 'getInformation'
  * 
  * expected Oputput:
- *      ruruThecat.move() //I Walking and running with my 4 legs
+ *      ruruThecat.move() //I'm Walking and running with my 4 legs
  * 
  * 2. Buatlah instance method 'getInformation'
  * 
@@ -59,6 +59,18 @@ class Animal  {
         this.age = 1;
         this.type ='Cat';
         this.favouriteFoods = ['Salmon', 'Tuna', 'Chicken'];
+        this.totalLegs = 4;
+    }
+    move () {
+        let message = `I'm Walking and running with ${this.totalLegs} legs`
+        return message
+    }
+
+    getInformation (greetings, hobby) {
+       
+
+        let message = `${greetings} my name is ${this.name}, I'm ${this.age} years old, and offcourse I'm a ${this.type}, my Favourite food are ${this.favouriteFoods}. ${this.move()} and I love ${hobby} with my ${this.totalLegs} cutipie legs `
+        return message
     }
 }
 
@@ -68,7 +80,8 @@ ruruTheCat.name = 'Ruru The Cat'
 console.log(ruruTheCat)
 
 //Release 1
-    //code here
-    
+console.log(ruruTheCat.move())
+console.log(ruruTheCat.getInformation("Anyeong Haseoo~", "Chasing birds"))
+
 //Release 2
     //code here
