@@ -56,3 +56,8 @@ for (let data of polaris) {
 
 //form 3 - map looping
 let data = polaris.map((el) => {console.log(el)})
+
+// form 4 - forEach looping
+polaris.forEach(function(element) {
+    console.log(element);
+});
