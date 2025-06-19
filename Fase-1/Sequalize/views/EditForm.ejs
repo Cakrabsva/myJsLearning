@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit New Data</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col">
+    <%- include('./partials/navbar')%>
+    <div class="flex justify-center">
+        <div class="bg-white shadow-lg rounded-lg p-8 w-full max-w-md">
+            <h1 class="text-2xl font-bold mb-6 text-center text-gray-800">Add User</h1>
+            <form action="/users/<%= user.id %>/update" method="POST" class="space-y-5">
+                <div>
+                    <label for="firstName" class="block text-gray-700 font-medium mb-1">First Name</label>
+                    <input type="text" id="firstName" name="first_name" required value=<%=user.first_name%>
+                        class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400">
+                </div>
+                <div>
+                    <label for="lastName" class="block text-gray-700 font-medium mb-1">Last Name</label>
+                    <input type="text" id="lastName" name="last_name" required value=<%=user.last_name%>
+                        class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400">
+                </div>
+                <div>
+                    <label for="email" class="block text-gray-700 font-medium mb-1">Email</label>
+                    <input type="email" id="email" name="email" required value=<%=user.email%>
+                        class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400">
+                </div>
+                <div>
+                    <label for="gender" class="block text-gray-700 font-medium mb-1">Gender</label>
+                    <select id="gender" name="gender" required
+                        class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400">
+                        <% if(user.gender == "Male") { %>
+                            <option value="Male" selected>Male</option>
+                            <option value="Female">Female</option>
+                        <% } else if(user.gender == "Female") { %>  
+                            <option value="Female" selected>Female</option>
+                            <option value="Male">Male</option>
+                        <% } else { %> 
+                            <option value="">Select Gender</option>
+                            <option value="Female">Female</option>
+                            <option value="Male">Male</option>
+                        <% } %>
+                    </select>
+                </div>
+                <button type="submit"
+                    class="w-full bg-blue-600 text-white font-semibold py-2 rounded hover:bg-blue-700 transition duration-200">
+                    Update
+                </button>
+                <a href="/users" class="inline-block px-3 py-1 text-gray-700 hover:text-red-700 flex justify-center text-decoration-line: underline">Back to User List</a>
+            </form>
+        </div>
+    </div>
+    <%- include('./partials/footer')%>
+</body>
+</html>
